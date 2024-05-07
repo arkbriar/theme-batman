@@ -1,5 +1,5 @@
 function git::is_stashed
-  command git rev-parse --verify --quiet refs/stash >/dev/null
+  command git stash list | command grep "." >/dev/null
 end
 
 function git::get_ahead_count
@@ -7,7 +7,7 @@ function git::get_ahead_count
 end
 
 function git::branch_name
-  command git symbolic-ref --short HEAD
+  command git rev-parse --abbrev-ref HEAD
 end
 
 function git::is_touched
