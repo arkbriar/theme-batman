@@ -1,7 +1,7 @@
 function fish_prompt
   test $status -ne 0;
     and set -l colors 600 900 c00
-    or set -l colors 333 666 aaa
+    or set -l colors 555 777 aaa
 
   set -l pwd (prompt_pwd)
   set -l base (basename "$pwd")
